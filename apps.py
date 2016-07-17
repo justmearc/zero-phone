@@ -30,7 +30,7 @@ class App():
         self.app_objects = []
         #Load modules
         for i in self.app_order:
-            loaded.append(imp.load_source(i + '.Run', '/home/pi/tyos/apps/' + i +'/' + i + '.py'))
+            loaded.append(imp.load_source(i + '.Run', '/home/pi/zero-phone/' + i +'/' + i + '.py'))
         #Load objects
         for i in loaded:
             self.app_objects.append(i.Run(self.fona))
@@ -67,7 +67,7 @@ class App():
         
     def get_app_order(self):
         #Get the order of the apps to be blitted
-        order_file = open('/home/pi/tyos/apps/order.txt', 'r')
+        order_file = open('/home/pi/zero-phone/order.txt', 'r')
         order = order_file.readlines()
 
         if len(order) < 4:
