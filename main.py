@@ -4,7 +4,7 @@
 
 '''
 Usage:
-If FONA is powered off, run sudo python /home/pi/zero-phone/main.py --power to turn module on and start TYOS.
+If FONA is powered off, run sudo python /home/pi/zero-phone/main.py --power to turn module on and start zero-phone.
 If FONA is already on, just run sudo python /home/pi/zero-phone/main.py
 
 '''
