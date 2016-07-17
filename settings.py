@@ -19,10 +19,10 @@ class Run():
         self.GREEN = (0,255,0)
         self.WHITE = (255,255,255)
         
-        self.menu = pygame.image.load('/home/pi/tyos/apps/settings/menu.png')
+        self.menu = pygame.image.load('/home/pi/zero-phone/menu.png')
         self.menu_rect = self.menu.get_rect()
 
-        self.font = pygame.font.Font('/home/pi/tyos/fonts/arial.ttf', 32)
+        self.font = pygame.font.Font('/home/pi/zero-phone/arial.ttf', 32)
 
         self.off = self.font.render('OFF', True, self.RED, self.WHITE)
         # fona power Text
@@ -49,7 +49,7 @@ class Run():
         self.next_app = None
 
     def get_audio_mode(self):
-        audio_config = open('/home/pi/tyos/configure/audio.conf', 'r')
+        audio_config = open('/home/pi/zero-phone/configure/audio.conf', 'r')
         file = audio_config.readlines()
 
         for i in range(0, len(file)):#Parse file
