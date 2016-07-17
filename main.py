@@ -17,7 +17,7 @@ import pygame, sys, os, time, datetime, traceback, warnings
 from pygame.locals import *
 import framebuffer, toolbar, apps, serialport, receive
 
-class tyos():
+class zero-phone():
     def __init__(self):
         warnings.filterwarnings("ignore")
         for arg in sys.argv:
@@ -27,7 +27,7 @@ class tyos():
             else:
                 self.POWER_FONA = False
             if arg == '--version':
-                print 'TYOS VERSION ' + VERSION
+                print 'Zero Phone VERSION ' + VERSION
                 sys.exit()
 
         self.VERSION = VERSION
@@ -233,7 +233,7 @@ class tyos():
             if self.reciever.call_coming:
                 self.reciever.get_events(event)
 
-phone = tyos()
+phone = zero-phone()
 try:
     phone.home() #E.T Reference
 
