@@ -56,7 +56,7 @@ class App():
         #Load the first four app's logo
         logos = {'surfaces':[], 'rects':[]}
         for i in range(0, 4):
-            logos['surfaces'].append(pygame.image.load('/home/pi/tyos/apps/' + self.app_order[i] + '/' + self.app_order[i] + '.png'))
+            logos['surfaces'].append(pygame.image.load('/home/pi/zero-phone/' + self.app_order[i] + '/' + self.app_order[i] + '.png'))
             logos['rects'].append(logos['surfaces'][i].get_rect())
 
         for i in range(0, 4):
