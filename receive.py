@@ -27,8 +27,8 @@ class Receive():
         self.BLACK = (0,0,0)
         
         #Setup images
-        self.call_image = pygame.image.load('/home/pi/tyos/apps/call/call.png')
-        self.hangup_image = pygame.image.load('/home/pi/tyos/apps/call/hangup.png')
+        self.call_image = pygame.image.load('/home/pi/zero-phone/call.png')
+        self.hangup_image = pygame.image.load('/home/pi/zero-phone/hangup.png')
 
         #Setup rects
         self.call_rect = self.call_image.get_rect()
@@ -36,7 +36,7 @@ class Receive():
         self.call_rect.x = 81
 
         #Setup fonts
-        self.font = pygame.font.Font('/home/pi/tyos/fonts/arial.ttf', 24)
+        self.font = pygame.font.Font('/home/pi/zero-phone/arial.ttf', 24)
 
         #Setup numbers Text
         self.incoming = self.font.render('Incoming Call...', True, self.BLACK, self.WHITE)
