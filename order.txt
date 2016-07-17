@@ -1,0 +1,6 @@
+call
+message
+app-list
+power
+camera
+settings
