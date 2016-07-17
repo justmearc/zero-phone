@@ -29,23 +29,23 @@ class Run():
         self.page = 1
 
         #Load images
-        self.keyboard_image = pygame.image.load('/home/pi/tyos/apps/message/keyboard.png')
-        self.num_keyboard_image = pygame.image.load('/home/pi/tyos/apps/message/numbered_keyboard.png')
-        self.bubble = pygame.image.load('/home/pi/tyos/apps/message/bubble.png')
+        self.keyboard_image = pygame.image.load('/home/pi/zero-phone/keyboard.png')
+        self.num_keyboard_image = pygame.image.load('/home/pi/zero-phone/numbered_keyboard.png')
+        self.bubble = pygame.image.load('/home/pi/zero-phone/bubble.png')
         self.keyboard_rect = self.keyboard_image.get_rect()
         self.keyboard_rect.x = 4
         self.keyboard_rect.y = 190
 
         #Main conversation image
-        self.conversation_image = pygame.image.load('/home/pi/tyos/apps/message/conversation.png')
+        self.conversation_image = pygame.image.load('/home/pi/zero-phone/conversation.png')
         self.conversation_rect = self.conversation_image.get_rect()
         self.conversation_rect.centerx = 104
         self.conversation_rect.centery = 169
 
         #Setup text
         #Setup fonts
-        self.font = pygame.font.Font('/home/pi/tyos/fonts/arial.ttf', 20)
-        self.message_font = pygame.font.Font('/home/pi/tyos/fonts/arial.ttf', 12)
+        self.font = pygame.font.Font('/home/pi/zero-phone/arial.ttf', 20)
+        self.message_font = pygame.font.Font('/home/pi/zero-phone/arial.ttf', 12)
 
         #please wait Text
         self.wait = self.font.render('Please wait...', True, self.BLACK, self.WHITE)
@@ -140,21 +140,21 @@ class Run():
     def load_contacts(self):
         self.contacts = {'names':[], 'numbers':[]}
         try:
-            contact_file = open('/home/pi/tyos/configure/contacts.conf', 'r')
+            contact_file = open('/home/pi/zero-phone/configure/contacts.conf', 'r')
         except:
             print '***********************************************************'
             print 'NO CONTACTS FOUND'
-            print 'PLEASE EDIT /home/pi/tyos/configure/contacts.conf FILE'
+            print 'PLEASE EDIT /home/pi/zero-phone/configure/contacts.conf FILE'
             print '***********************************************************'
-            if not os.path.exists('/home/pi/tyos/configure'):
-                os.mkdir('/home/pi/tyos/configure')
-            if not os.path.exists('/home/pi/tyos/logs'):
-                os.mkdir('/home/pi/tyos/logs') #May be in wrong spot, but it works
-            contact_file = open('/home/pi/tyos/configure/contacts.conf', 'w+')
+            if not os.path.exists('/home/pi/zero-phone/configure'):
+                os.mkdir('/home/pi/zero-phone/configure')
+            if not os.path.exists('/home/pi/zero-phone/logs'):
+                os.mkdir('/home/pi/zero-phone/logs') #May be in wrong spot, but it works
+            contact_file = open('/home/pi/zero-phone/configure/contacts.conf', 'w+')
             contact_file.write('#Contacts\n')
             contact_file.write('#Use format name=number i.e. Joe=1555666777 # are comments\n')
             contact_file.close()
-            contact_file = open('/home/pi/tyos/configure/contacts.conf', 'r')
+            contact_file = open('/home/pi/zero-phone/configure/contacts.conf', 'r')
 
         self.contact_list = contact_file.readlines()
         contact_file.close()
