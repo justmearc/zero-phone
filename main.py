@@ -17,7 +17,7 @@ import pygame, sys, os, time, datetime, traceback, warnings
 from pygame.locals import *
 import framebuffer, toolbar, apps, serialport, receive
 
-class zero-phone():
+class zero_phone():
     def __init__(self):
         warnings.filterwarnings("ignore")
         for arg in sys.argv:
@@ -233,7 +233,7 @@ class zero-phone():
             if self.reciever.call_coming:
                 self.reciever.get_events(event)
 
-phone = zero-phone()
+phone = zero_phone()
 try:
     phone.home() #E.T Reference
 
