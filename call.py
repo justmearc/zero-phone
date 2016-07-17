@@ -21,10 +21,10 @@ class Run():
         self.fona = fona
 
         #Load images
-        self.circle_image = pygame.image.load('/home/pi/tyos/apps/call/circle.png')
-        self.call_image = pygame.image.load('/home/pi/tyos/apps/call/call.png')
-        self.back_image = pygame.image.load('/home/pi/tyos/apps/call/back.png')
-        self.hangup_image = pygame.image.load('/home/pi/tyos/apps/call/hangup.png')
+        self.circle_image = pygame.image.load('/home/pi/zero-phone/circle.png')
+        self.call_image = pygame.image.load('/home/pi/zero-phone/call.png')
+        self.back_image = pygame.image.load('/home/pi/zero-phone/back.png')
+        self.hangup_image = pygame.image.load('/home/pi/zero-phone/hangup.png')
 
         self.numbers = {'surfaces':[], 'rects':[]}
 
@@ -34,7 +34,7 @@ class Run():
         self.BLACK = (0,0,0)
 
         #Setup fonts
-        self.font = pygame.font.Font('/home/pi/tyos/fonts/arial.ttf', 48)
+        self.font = pygame.font.Font('/home/pi/zero-phone/arial.ttf', 48)
 
         #Setup numbers Text
         self.number = self.font.render('1', True, self.RED, self.WHITE)
