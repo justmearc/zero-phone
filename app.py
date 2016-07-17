@@ -49,17 +49,17 @@ class Stream():
         pygame.mouse.set_visible(False)
 
         #Setup buttons
-        self.capture = pygame.image.load('/home/pi/tyos/apps/camera/camera.png')
-        self.gallery = pygame.image.load('/home/pi/tyos/apps/camera/images/gallery.png')
-        self.door = pygame.image.load('/home/pi/tyos/apps/camera/images/door.png')
-        self.right = pygame.image.load('/home/pi/tyos/apps/camera/images/right.png')
-        self.left = pygame.image.load('/home/pi/tyos/apps/camera/images/left.png')
-        self.home = pygame.image.load('/home/pi/tyos/apps/camera/images/home.png')
-        self.upload = pygame.image.load('/home/pi/tyos/apps/camera/images/upload.png')
-        self.delete = pygame.image.load('/home/pi/tyos/apps/camera/images/trash.png')
-        self.deleted_image = pygame.image.load('/home/pi/tyos/apps/camera/images/deleted.png')
-        self.uploading_image = pygame.image.load('/home/pi/tyos/apps/camera/images/uploading.png')
-        self.no_files_image = pygame.image.load('/home/pi/tyos/apps/camera/images/nofiles.png')
+        self.capture = pygame.image.load('/home/pi/zero-phone/camera.png')
+        self.gallery = pygame.image.load('/home/pi/zero-phone/gallery.png')
+        self.door = pygame.image.load('/home/pi/zero-phone/door.png')
+        self.right = pygame.image.load('/home/pi/zero-phone/right.png')
+        self.left = pygame.image.load('/home/pi/zero-phone/left.png')
+        self.home = pygame.image.load('/home/pi/zero-phone/home.png')
+        self.upload = pygame.image.load('/home/pi/zero-phone/upload.png')
+        self.delete = pygame.image.load('/home/pi/zero-phone/trash.png')
+        self.deleted_image = pygame.image.load('/home/pi/zero-phone/deleted.png')
+        self.uploading_image = pygame.image.load('/home/pi/zero-phone/uploading.png')
+        self.no_files_image = pygame.image.load('/home/pi/zero-phone/nofiles.png')
         
     def display(self):
         while True:
@@ -158,7 +158,7 @@ class Stream():
                                 new = open('/home/pi/index.dat', 'w+')
                                 new.write(str(self.index))
                                 new.close()
-                                cam = Popen(['sudo', 'python', '/home/pi/tyos/src/main.py'])
+                                cam = Popen(['sudo', 'python', '/home/pi/zero-phone/main.py'])
                                 pygame.quit()
                                 sys.exit()
 
