@@ -21,7 +21,7 @@ class Run():
         #Setup clock
         self.start_time = time.time()
         #Stuff for intro animation
-        self.stock_image = pygame.image.load('/home/pi/zero-phone/' + self.app_order[0] + '/' + self.app_order[0] + '.png')
+        self.stock_image = pygame.image.load('/home/pi/zero-phone/' + self.app_order[0] + '.png')
         self.stock_rect = self.stock_image.get_rect()
         self.load_icons()
         #More variables
@@ -49,7 +49,7 @@ class Run():
     def load_icons(self):
         for i in range(0, len(self.app_order)):
             #Add icon and rect
-            self.blit['surfaces'].append(pygame.image.load('/home/pi/zero-phone/' + self.app_order[i] + '/' + self.app_order[i] + '.png'))
+            self.blit['surfaces'].append(pygame.image.load('/home/pi/zero-phone/'  + self.app_order[i] + '.png'))
 
             self.stock_rect = self.stock_image.get_rect()
             self.stock_rect.centery = 52
