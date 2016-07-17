@@ -18,7 +18,7 @@ class Run():
         self.next_app = None
 
     def run_app(self):
-        cam = Popen(['sudo', 'python', '/home/pi/tyos/apps/camera/app.py'])
+        cam = Popen(['sudo', 'python', '/home/pi/zero-phone/app.py'])
         pygame.quit()
         sys.exit()
         
