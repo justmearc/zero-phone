@@ -30,7 +30,7 @@ class App():
         self.app_objects = []
         #Load modules
         for i in self.app_order:
-            loaded.append(imp.load_source(i + '.Run', '/home/pi/zero-phone/' + i +'/' + i + '.py'))
+            loaded.append(imp.load_source(i + '.Run', '/home/pi/zero-phone/' + i + '.py'))
         #Load objects
         for i in loaded:
             self.app_objects.append(i.Run(self.fona))
